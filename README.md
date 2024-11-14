@@ -1,11 +1,3 @@
-This is a website about OpenObj
+This is a website about LGSDF
 
-link: https://openobj.github.io/
-
-git pull
-
-git add .
-
-git commit -m "?"
-
-git push
+link: https://lgsdf.github.io/
