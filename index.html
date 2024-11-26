@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
   <!-- <link rel="stylesheet" href="./static/css/foundation.css"/> -->
+  <link rel="stylesheet" href="./static/css/video_slide.css"/>
   <link rel="stylesheet" href="./static/css/twentytwenty.css"/>
   <link rel="stylesheet" href="./static/css/titleCenter.css"/>
 
@@ -42,6 +43,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_slide.js"></script>
   <script src="./static/js/jquery.twentytwenty.js"></script>
   <script>
     $(function(){
@@ -245,15 +247,95 @@
         <h2 class="title is-3">Results</h2>
 
         
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">The Mapping Process </h3>
+        
+          <section class="hero is-light is-middle">
+            <div class="hero-body">
+              <div class="container">
+                <div class="carousel">
+                  <div class="slider-item active">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_apt_2_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_apt_3_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_0004_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_0005_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_0009_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_0010_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_0030_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls muted loop playsinline>
+                      <source src="./static/videos/scene_0031_264.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+<!--         
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <div class="row">
+              <div class="column" style="width: 50%; float: left">
+                <p style="font-weight: bold">
+                  scene_0004
+                </p>
+                <br>
+                <video controls autoplay="autoplay" muted loop style="width: 1900px; height: 100px;">
+                  <source src="./static/videos/scene_0004_264.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column" style="width: 50%; float: left">
+                <p style="font-weight: bold">
+                  scene_0005
+                </p>
+                <br>
+                <video controls autoplay="autoplay" muted loop style="width: 100%; max-width: 800px;">
+                  <source src="./static/videos/scene_0005_264.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+         -->
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">2D ESDF Slices and Meshes Comparison </h3>
           <img id="teaser" src="./static/images/checkResult.jpg" alt="teaser">
-        <!--/ Re-rendering. -->
+
 
         <h3 class="title is-4">3D Reconstruction</h3>
         <p class="caption selection" style="grid-column-start: 1; grid-column-end: 3;">
-          Visualisation of Scene
+          Visualisation of scene
         <select id="partial_label-selector1_3D" class="partial_label-selector-3D" style="padding: 2px; background:#f0f0f0; border:none; font-family: 'Noto Sans', sans-serif; font-size:16px;">
                     <option value="apt_3">apt_3</option>
                     <option value="scene_0005">scene_0005</option>
