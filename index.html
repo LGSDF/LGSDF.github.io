@@ -233,6 +233,15 @@
       </style>
       <h2 class="title is-3">Framework</h2>
       <img id="teaser" src="./static/images/framework.jpg" alt="teaser">
+      
+      <div class="content has-text-justified">
+        <p style="text-indent: 0em;">
+          LGSDF takes a sequence of posed depth images as input and continuously trains a randomly initialized neural network as the final implicit ESDF map.
+          LGSDF consists of two main modules: the front-end and the back-end. The front-end Local Updating Module focuses on incrementally updating local anchors based on current observations. 
+          In contrast, the back-end Global Learning Module handles the curation of training data (i.e., anchors) and employs specific network optimization strategies.
+          As the posed depth images are continuously input, the network gradually restores the full SDF of the observed scene.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -248,8 +257,14 @@
 
         
         <!-- Re-rendering. -->
-        <h3 class="title is-4">The Mapping Process </h3>
+        <h3 class="title is-4">The Mapping Process in 10x</h3>
         
+      <div class="content has-text-justified">
+        <p style="text-indent: 0em;">
+          Tips: Videos play better in full screen!
+        </p>
+      </div>
+
           <section class="hero is-light is-middle">
             <div class="hero-body">
               <div class="container">
@@ -298,6 +313,7 @@
               </div>
             </div>
           </section>
+          
 
 <!--         
         <div class="columns is-centered has-text-centered">
