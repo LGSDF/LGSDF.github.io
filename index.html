@@ -263,9 +263,7 @@
           Visualisation of Scene
         <select id="partial_label-selector1_3D" class="partial_label-selector-3D" style="padding: 2px; background:#f0f0f0; border:none; font-family: 'Noto Sans', sans-serif; font-size:16px;">
                     <option value="apt_3" selected="">apt_3</option>
-                    <option value="room0">room0</option>
-                    <option value="scene_0010">scene_0010</option>
-                    <option value="scene_0031">scene_0031</option>
+                    <option value="scene_0005">room0</option>
        </select>
               reconstructed by different methods.
           </p>
@@ -308,50 +306,29 @@
             </div>
             </div>
           </div>
-
-          <div class="partial_label_3D office3" style="display: none;">
-            <!--  office3  -->
+        
+          <div class="partial_label_3D scene_0005" style="display: none;">
+            <!--  office0 -->
             <div class="grid-container">
             <div class="item1">
-                    <model-viewer style="height: 300px; width: 400px;" alt="instance" src="./static/3dModel/office_3_rgb_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    <model-viewer style="height: 300px; width: 400px;" alt="Voxblox" src="./static/3dModel/apt_3_nav/voxblox.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
                     </model-viewer>
             </div>
             <div class="item2">
-                    <model-viewer style="height: 300px; width: 400px;" alt="partfeat" src="./static/3dModel/office_3_semantic_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    <model-viewer style="height: 300px; width: 400px;" alt="iSDF" src="./static/3dModel/apt_3_nav/isdf.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
                     </model-viewer>
             </div>
             <div class="item3">
-                    <model-viewer style="height: 300px; width: 400px;" alt="rgb" src="./static/3dModel/office_3_instance_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    <model-viewer style="height: 300px; width: 400px;" alt="LGSDF" src="./static/3dModel/apt_3_nav/lgsdf.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
                     </model-viewer>
             </div>
             <div class="item4">
-                    <model-viewer style="height: 300px; width: 400px;" alt="semantic" src="./static/3dModel/office_3_partfeat_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
+                    <model-viewer style="height: 300px; width: 400px;" alt="GT" src="./static/3dModel/apt_3_nav/GT.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
                     </model-viewer>
             </div>
             </div>
           </div>
-
-          <div class="partial_label_3D room0">
-            <!--  room0  -->
-            <div class="grid-container">
-            <div class="item1">
-                    <model-viewer style="height: 300px; width: 400px;" alt="instance" src="./static/3dModel/room_0_rgb_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
-                    </model-viewer>
-            </div>
-            <div class="item2">
-                    <model-viewer style="height: 300px; width: 400px;" alt="partfeat" src="./static/3dModel/room_0_semantic_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
-                    </model-viewer>
-            </div>
-            <div class="item3">
-                    <model-viewer style="height: 300px; width: 400px;" alt="rgb" src="./static/3dModel/room_0_instance_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
-                    </model-viewer>
-            </div>
-            <div class="item4">
-                    <model-viewer style="height: 300px; width: 400px;" alt="semantic" src="./static/3dModel/room_0_partfeat_colored_scene.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema="" ar-status="not-presenting">
-                    </model-viewer>
-            </div>
-            </div>
-          </div>
+        
           <div class="columns is-centered">
             <!-- Wheel -->
             <div class="column">
