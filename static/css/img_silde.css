@@ -1,0 +1,79 @@
+/* 调整滑动条容器的样式 */
+.imgslider-container {
+    width: 100%;
+    max-width: 900px; /* 控制最大宽度 */
+    margin: 20px auto;
+    text-align: center;
+    height: 60px; /* 设置固定高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 控制滑动条本身的样式 */
+.imgslider-container input[type="range"] {
+    -webkit-appearance: none; /* 使滑动条自定义 */
+    appearance: none;
+    width: 80%; /* 设置滑动条宽度 */
+    height: 8px; /* 设置轨道的高度 */
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* 添加渐变背景 */
+    border-radius: 5px; /* 圆角 */
+    outline: none; /* 去除外部轮廓 */
+    transition: background 0.3s ease; /* 过渡效果 */
+}
+
+.imgslider-container input[type="range"]:focus {
+    background: linear-gradient(to right, #45a049, #7cb342); /* 聚焦时改变颜色 */
+}
+
+/* 滑块的样式 */
+::-webkit-slider-thumb {
+    -webkit-appearance: none; /* 必须设置为none才能自定义滑块 */
+    appearance: none;
+    width: 20px; /* 设置滑块的宽度 */
+    height: 20px; /* 设置滑块的高度 */
+    background: #4CAF50; /* 设置滑块的背景色 */
+    border-radius: 50%; /* 设置滑块为圆形 */
+    cursor: pointer; /* 设置鼠标悬停时的样式 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 为滑块添加阴影 */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+}
+
+::-webkit-slider-thumb:hover {
+    background: #388E3C; /* 悬停时改变滑块颜色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 悬停时增加阴影 */
+}
+
+/* 滑动条的轨道样式 */
+::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #ddd; /* 设置轨道的颜色 */
+    border-radius: 5px;
+}
+
+/* 控制滑动条的标记（如最低值和最高值） */
+.imgslider-container span {
+    font-size: 14px;
+    color: #333; /* 设置颜色 */
+    margin: 0 10px;
+}
+
+
+/* 图片容器的样式 */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;     /* 适当的上边距 */
+    margin-bottom: 10px;  /* 适当的下边距 */
+    height: 400px;        /* 固定高度，确保图片居中 */
+    overflow: hidden;     /* 防止图片溢出 */
+}
+
+/* 控制图片的大小 */
+.slider-image {
+    width: 100%;          /* 图片宽度占容器的100% */
+    max-width: 600px;     /* 图片最大宽度为600px */
+    height: auto;         /* 高度自动调整，保持图片的纵横比 */
+    object-fit: contain;  /* 保持图片比例，不裁切 */
+}

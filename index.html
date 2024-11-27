@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="./static/css/video_slide.css"/>
   <link rel="stylesheet" href="./static/css/twentytwenty.css"/>
   <link rel="stylesheet" href="./static/css/titleCenter.css"/>
+  <link rel="stylesheet" href="./static/css/img_silde.css"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -91,8 +92,10 @@
     </style>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
   </head>
 <body>
+
 
 
 <section class="hero">
@@ -228,7 +231,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
 
-        
+
         <!-- Re-rendering. -->
         <h3 class="title is-4">The Mapping Process in 10x</h3>
         
@@ -288,6 +291,7 @@
           </section>
           
 
+
 <!--         
         <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
@@ -316,11 +320,156 @@
           </div>
         </div>
          -->
+        
+         <h3 class="title is-4">Full ESDF</h3>
+            <!-- 显示图片的容器 -->
+             <!-- 图片容器 -->
+<div id="image-container-1" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <img id="slider-image-1" src="./static/images/demo/up_mesh_9.png" alt="Image 1" style="width: 30%; height: auto;">
+  <img id="slider-image-2" src="./static/images/demo/up_9.png" alt="Image 2" style="width: 30%; height: auto;">
+  <img id="slider-image-3" src="./static/images/demo/up_gt_9.png" alt="Image 3" style="width: 30%; height: auto;">
+</div>
+
+<!-- 滑动条和标题 -->
+<div style="display: flex; justify-content: center; gap: 280px; margin-top: 10px;">
+  <div>3D Mesh</div>
+  <div>Our Slice</div>
+  <div>GT Slice</div>
+</div>
+
+<div class="imgslider-container" style="display: flex; align-items: center; text-align: center; margin-top: 20px;">
+  <p style=" width: 800px; margin-right: 50px;"> <strong>You can slide to get different Z 's ESDF slices :</strong></p>
+  <span style="margin-right: 10px;">Topmost </span>
+  <input type="range" id="slider-1" min="1" max="20" value="10" style="flex-grow: 1;">
+  <span style="margin-left: 10px;">Bottommost </span>
+</div>
+
+<script>
+  // 图片列表，包含两张图片要切换的集合
+  const images1_up = [];
+  const images2_up = [];
+  const images3_up = [];
+
+  for (let i = 0; i <= 19; i++) {
+      images1_up.push(`./static/images/demo/up_mesh_${i}.png`);
+      images2_up.push(`./static/images/demo/up_${i}.png`);
+      images3_up.push(`./static/images/demo/up_gt_${i}.png`);
+  }
+
+  // 获取滑块和图片容器
+  const slider_up = document.getElementById('slider-1');
+  const imageContainer1_up = document.getElementById('slider-image-1');
+  const imageContainer2_up = document.getElementById('slider-image-2');
+  const imageContainer3_up = document.getElementById('slider-image-3');
+
+  // 更新图片和显示的滑块值
+  slider_up.addEventListener('input', function() {
+      const index = slider_up.value - 1; // 调整索引，因为滑块的最小值是1
+      imageContainer1_up.src = images1_up[index];
+      imageContainer2_up.src = images2_up[index];
+      imageContainer3_up.src = images3_up[index];
+  });
+</script>
+
+<!-- 第二组图片和滑动条 -->
+<div id="image-container-2" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <img id="slider-image-4" src="./static/images/demo/left_mesh_9.png" alt="Image 1" style="width: 30%; height: auto;">
+  <img id="slider-image-5" src="./static/images/demo/left_9.png" alt="Image 2" style="width: 30%; height: auto;">
+  <img id="slider-image-6" src="./static/images/demo/left_gt_9.png" alt="Image 3" style="width: 30%; height: auto;">
+</div>
+
+<div style="display: flex; justify-content: center; gap: 280px; margin-top: 10px;">
+  <div>3D Mesh</div>
+  <div>Our Slice</div>
+  <div>GT Slice</div>
+</div>
+
+<div class="imgslider-container" style="display: flex; align-items: center; text-align: center; margin-top: 20px;">
+  <p style=" width: 800px; margin-right: 50px;"> <strong>You can slide to get different X 's ESDF slices :</strong></p>
+  <span style="margin-right: 10px;">Leftmost </span>
+  <input type="range" id="slider-2" min="1" max="20" value="10" style="flex-grow: 1;">
+  <span style="margin-left: 10px;">Rightmost </span>
+</div>
+
+<script>
+  // 图片列表，包含两张图片要切换的集合
+  const images1_left = [];
+  const images2_left = [];
+  const images3_left = [];
+
+  for (let i = 0; i <= 19; i++) {
+      images1_left.push(`./static/images/demo/left_mesh_${i}.png`);
+      images2_left.push(`./static/images/demo/left_${i}.png`);
+      images3_left.push(`./static/images/demo/left_gt_${i}.png`);
+  }
+
+  // 获取滑块和图片容器
+  const slider_left = document.getElementById('slider-2');
+  const imageContainer1_left = document.getElementById('slider-image-4');
+  const imageContainer2_left = document.getElementById('slider-image-5');
+  const imageContainer3_left = document.getElementById('slider-image-6');
+
+  // 更新图片和显示的滑块值
+  slider_left.addEventListener('input', function() {
+      const index = slider_left.value - 1; // 调整索引，因为滑块的最小值是1
+      imageContainer1_left.src = images1_left[index];
+      imageContainer2_left.src = images2_left[index];
+      imageContainer3_left.src = images3_left[index];
+  });
+</script>
+
+<!-- 第三组图片和滑动条 -->
+<div id="image-container-3" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <img id="slider-image-7" src="./static/images/demo/front_mesh_9.png" alt="Image 1" style="width: 30%; height: auto;">
+  <img id="slider-image-8" src="./static/images/demo/front_9.png" alt="Image 2" style="width: 30%; height: auto;">
+  <img id="slider-image-9" src="./static/images/demo/front_gt_9.png" alt="Image 3" style="width: 30%; height: auto;">
+</div>
+
+<div style="display: flex; justify-content: center; gap: 280px; margin-top: 10px;">
+  <div>3D Mesh</div>
+  <div>Our Slice</div>
+  <div>GT Slice</div>
+</div>
+
+<div class="imgslider-container" style="display: flex; align-items: center; text-align: center; margin-top: 20px;">
+  <p style=" width: 800px; margin-right: 50px;"> <strong>You can slide to get different Y 's ESDF slices :</strong></p>
+  <span style="margin-right: 10px;"> Backmost</span>
+  <input type="range" id="slider-3" min="1" max="20" value="10" style="flex-grow: 1;">
+  <span style="margin-left: 10px;"> Frontmost</span>
+</div>
+
+<script>
+  // 图片列表，包含两张图片要切换的集合
+  const images1_front = [];
+  const images2_front = [];
+  const images3_front = [];
+
+  for (let i = 0; i <= 19; i++) {
+      images1_front.push(`./static/images/demo/front_mesh_${i}.png`);
+      images2_front.push(`./static/images/demo/front_${i}.png`);
+      images3_front.push(`./static/images/demo/front_gt_${i}.png`);
+  }
+
+  // 获取滑块和图片容器
+  const slider_front = document.getElementById('slider-3');
+  const imageContainer1_front = document.getElementById('slider-image-7');
+  const imageContainer2_front = document.getElementById('slider-image-8');
+  const imageContainer3_front = document.getElementById('slider-image-9');
+
+  // 更新图片和显示的滑块值
+  slider_front.addEventListener('input', function() {
+      const index = slider_front.value - 1; // 调整索引，因为滑块的最小值是1
+      imageContainer1_front.src = images1_front[index];
+      imageContainer2_front.src = images2_front[index];
+      imageContainer3_front.src = images3_front[index];
+  });
+</script>
+
+
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">2D ESDF Slices and Meshes Comparison </h3>
           <img id="teaser" src="./static/images/checkResult.jpg" alt="teaser">
-
 
         <h3 class="title is-4">3D Reconstruction</h3>
         <p class="caption selection" style="grid-column-start: 1; grid-column-end: 3;">
@@ -339,14 +488,14 @@
             <!-- Wheel -->
             <div class="column">
               <div class="content" center="">
-                <h4 class="title is-5 has-text-centered">Voxblox</h4>
+                <h4 class="title is-6 has-text-centered">Voxblox</h4>
               </div>
             </div>
       
             <!-- Wheel -->
             <div class="column">
               <div class="content" center="">
-                <h4 class="title is-5 has-text-centered">iSDF</h4>
+                <h4 class="title is-6 has-text-centered">iSDF</h4>
               </div>
             </div>
           </div>
@@ -448,14 +597,14 @@
             <!-- Wheel -->
             <div class="column">
               <div class="content" center="">
-                <h4 class="title is-5 has-text-centered">LGSDF</h4>
+                <h4 class="title is-6 has-text-centered">LGSDF</h4>
               </div>
             </div>
       
             <!-- Wheel -->
             <div class="column">
               <div class="content" center="">
-                <h4 class="title is-5 has-text-centered">GT</h4>
+                <h4 class="title is-6 has-text-centered">GT</h4>
               </div>
             </div>
           </div>
@@ -467,7 +616,9 @@
     <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
     <script src="./static/js/select.js"></script>
   </div>
+
 </section>
+
 
 
 
@@ -482,6 +633,7 @@
     }</code></pre>
   </div>
 </section>
+
 
 
 <footer class="footer">
